@@ -1,12 +1,12 @@
+import { ContentNotific } from '@/components/ContentNotific'
 import { Header } from '@/components/Header'
 import React from 'react'
 
-// import { BellIcon, UserIcon } from '@heroicons/react/outline';
-
 export default function Home() {
   return (
-    <div>
+    <main className="w-full items-center">
       <Header />
-    </div>
+      <ContentNotific />
+    </main>
   )
 }
