@@ -1,6 +1,7 @@
 import { CardNotific } from '@/components/CardNotific'
 import { ContentNotific } from '@/components/ContentNotific'
 import { Header } from '@/components/Header'
+import { ModalConfirm } from '@/components/ModalConfirm'
 import React from 'react'
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
       <Header />
       <ContentNotific />
       <CardNotific />
+      <ModalConfirm />
     </main>
   )
 }

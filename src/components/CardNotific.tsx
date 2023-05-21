@@ -39,7 +39,7 @@ export function CardNotific() {
           </p>
           <hr className="my-4 border-gray-300" />
           <div className="flex items-end">
-            <button className="my-2 ml-[68px] flex h-[42px] w-[194px] items-center justify-center rounded border-2 border-violet-300 border-opacity-50 text-lg font-bold uppercase text-violet-700 hover:bg-violet-300 hover:text-white">
+            <button className="my-2 ml-[68px] flex h-[42px] w-[194px] items-center justify-center rounded border-2 border-violet-300 border-opacity-50 text-lg font-bold uppercase text-violet-700 hover:bg-violet-300 hover:text-white hover:opacity-50">
               Ler Mensagem
             </button>
           </div>
