@@ -1,16 +1,14 @@
-import { CardNotific } from '@/components/CardNotific'
-import { ContentNotific } from '@/components/ContentNotific'
+import { CardList } from '@/components/CardList'
+import { Title } from '@/components/Title'
 import { Header } from '@/components/Header'
-import { ModalConfirm } from '@/components/ModalConfirm'
 import React from 'react'
 
 export default function Home() {
   return (
     <main className="w-full items-center">
       <Header />
-      <ContentNotific />
-      <CardNotific />
-      <ModalConfirm />
+      <Title />
+      <CardList />
     </main>
   )
 }
