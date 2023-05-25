@@ -1,5 +1,3 @@
-import router from 'next/router'
-
 export function PageNumbers({
   totalPages,
   onPageSelect,

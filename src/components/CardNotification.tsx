@@ -37,6 +37,7 @@ export function CardNotification({
     <>
       {isNotificModalOpen && (
         <NotificationModal
+          key={key}
           notific={notific}
           closeModal={handleCloseNotificModal}
         />
@@ -50,9 +51,9 @@ export function CardNotification({
       )}
 
       <div key={key} className="p-4">
-        <div className="h-[267px] w-[368px] rounded-lg bg-white shadow-lg">
+        <div className="h-[267px] w-[368px] rounded-lg bg-white pt-2 shadow-2xl">
           <div className="flex items-center justify-between px-4 py-2">
-            <div className="flex items-center align-top">
+            <div className="flex items-start align-top">
               <Image
                 className="text-black mr-4 align-top"
                 src={letterNotification}
@@ -65,11 +66,11 @@ export function CardNotification({
             </div>
 
             <button
-              className="text-violet-700 hover:text-violet-500"
+              className="items-start text-violet-700  hover:text-violet-500"
               onClick={handleOpenRemoveModal}
             >
               <svg
-                className="h-6 w-6"
+                className="h-6 w-6  items-start"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="none"
