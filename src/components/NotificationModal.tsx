@@ -21,7 +21,7 @@ export function NotificationModal({
   return (
     <div
       key={key}
-      className="bg-black fixed inset-0 z-10 flex items-start items-center justify-center bg-gray-500 bg-opacity-80 p-4 shadow-lg shadow-gray-500/50"
+      className="bg-black fixed inset-0 z-10 flex items-center justify-center bg-gray-500 bg-opacity-80 p-4 shadow-lg shadow-gray-500/50"
     >
       <div className="flex items-center justify-between px-4 py-2">
         <div className="w-[368px] max-w-lg rounded-lg bg-white p-4 shadow-2xl">

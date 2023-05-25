@@ -12,8 +12,9 @@ export function PageNumbers({
         .map((_, index) => {
           return (
             <button
-              className="hover:opacity-0.1 hover:text-gray bg-gray my-2 ml-[40px] flex h-[40px] w-[40px] items-center
-          justify-center rounded text-violet-700 hover:bg-gray-300"
+              className="hover:opacity-0.1 hover:text-gray bg-gray my-2 ml-[40px] flex h-[40px] w-[40px]
+          items-center justify-center rounded-full
+          bg-gray-300 text-violet-700 hover:bg-gray-300"
               key={index}
               onClick={() => onPageSelect(index + 1)}
             >
