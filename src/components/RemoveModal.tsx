@@ -8,9 +8,11 @@ import { Notific } from './CardList'
 export function RemoveModal({
   notific,
   closeModal,
+  onDelete,
 }: {
   notific: Notific
   closeModal: () => void
+  onDelete: (notificId: number) => void
 }) {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center">
@@ -39,7 +41,7 @@ export function RemoveModal({
           <button
             className="mr-2 h-[42px] w-[202px] rounded bg-red-900 px-4 py-2 font-medium text-white hover:bg-red-700
                 hover:text-white  "
-            onClick={closeModal}
+            onClick={() => onDelete(notific.id)}
           >
             Sim
           </button>

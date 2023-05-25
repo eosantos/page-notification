@@ -14,9 +14,13 @@ export interface Notific {
 }
 
 export function CardList() {
-  const [notifics, setNotifics] = useState([])
+  const [notifics, setNotifics] = useState<Notific[]>([])
 
-  const getPosts = async () => {
+  useEffect(() => {
+    getNotifications()
+  }, [])
+
+  const getNotifications = async () => {
     try {
       const response = await axios.get(
         'http://localhost:3004/notifications?_page=1&_limit=6&_sort=date&_order=desc',
@@ -29,9 +33,18 @@ export function CardList() {
     }
   }
 
-  useEffect(() => {
-    getPosts()
-  }, [])
+  const deleteNotific = async (notificationId: number) => {
+    try {
+      const updatedNotific = notifics.filter(
+        (notific) => notific.id !== notificationId,
+      )
+      setNotifics(updatedNotific)
+
+      await axios.put('db.json', { items: updatedNotific })
+    } catch (error) {
+      console.error('Erro ao excluir o item:', error)
+    }
+  }
 
   return (
     <div>
@@ -40,7 +53,11 @@ export function CardList() {
           <EmptyList />
         ) : (
           notifics.map((notific: Notific) => (
-            <CardNotification key={notific.id} notific={notific} />
+            <CardNotification
+              key={notific.id}
+              notific={notific}
+              onDelete={deleteNotific}
+            />
           ))
         )}
       </div>

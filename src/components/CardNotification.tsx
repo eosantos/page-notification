@@ -8,9 +8,11 @@ import { NotificationModal } from './NotificationModal'
 export function CardNotification({
   key,
   notific,
+  onDelete,
 }: {
   key: number
   notific: Notific
+  onDelete: (notificId: number) => void
 }) {
   const [isNotificModalOpen, setIsNotificModalOpen] = useState(false)
   const [isRemoveModalOpen, setIsRemoveModalOpen] = useState(false)
@@ -40,7 +42,11 @@ export function CardNotification({
         />
       )}
       {isRemoveModalOpen && (
-        <RemoveModal notific={notific} closeModal={handleCloseRemoveModal} />
+        <RemoveModal
+          notific={notific}
+          closeModal={handleCloseRemoveModal}
+          onDelete={onDelete}
+        />
       )}
 
       <div key={key} className="p-4">
