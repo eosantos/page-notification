@@ -10,7 +10,7 @@ export function CardNotification({
   notific: Notific
 }) {
   return (
-    <div key={key} className="flex items-center justify-center p-4">
+    <div key={key} className="p-4">
       <div className="h-[267px] w-[368px] rounded-lg bg-white shadow-lg">
         <div className="flex items-center justify-between px-4 py-2">
           <div className="flex items-center align-top">

@@ -2,9 +2,9 @@
 import { useEffect, useState } from 'react'
 
 import axios from 'axios'
-import router from 'next/router'
 import { EmptyList } from './EmptyList'
 import { CardNotification } from './CardNotification'
+import { Pages } from './Pages'
 
 export interface Notific {
   id: number
@@ -34,8 +34,8 @@ export function CardList() {
   }, [])
 
   return (
-    <div className="flex flex-wrap justify-center">
-      <div>
+    <div>
+      <div className="flex flex-wrap justify-center">
         {notifics.length === 0 ? (
           <EmptyList />
         ) : (
@@ -44,22 +44,7 @@ export function CardList() {
           ))
         )}
       </div>
-      <div className="justify flex items-end">
-        {Array(5)
-          .fill('')
-          .map((_, index) => {
-            return (
-              <button
-                className="hover:opacity-0.1 hover:text-gray bg-gray my-2 ml-[40px] flex h-[40px] w-[40px] items-center
-                justify-center rounded text-violet-700 hover:bg-gray-300"
-                key={index}
-                onClick={() => router.push('index + 1')}
-              >
-                {index + 1}
-              </button>
-            )
-          })}
-      </div>
+      <Pages />
     </div>
   )
 }
