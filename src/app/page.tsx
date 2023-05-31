@@ -5,7 +5,7 @@ import React from 'react'
 
 export default function Home() {
   return (
-    <main className="w-full items-center">
+    <main>
       <Header />
       <Title />
       <CardList />

@@ -16,6 +16,7 @@ export function CardNotification({
 }) {
   const [isNotificModalOpen, setIsNotificModalOpen] = useState(false)
   const [isRemoveModalOpen, setIsRemoveModalOpen] = useState(false)
+  console.log(key)
 
   const handleOpenNotificModal = () => {
     setIsNotificModalOpen(true)
@@ -44,6 +45,7 @@ export function CardNotification({
       )}
       {isRemoveModalOpen && (
         <RemoveModal
+          key={key}
           notific={notific}
           closeModal={handleCloseRemoveModal}
           onDelete={onDelete}

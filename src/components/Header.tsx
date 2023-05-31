@@ -5,7 +5,7 @@ import avatarTheacher from '../assets/avatar-teacher.svg'
 
 export function Header() {
   return (
-    <header className="flex items-center justify-between bg-violet-700 px-4 py-4">
+    <header className="mx-auto flex items-center justify-between bg-violet-700 px-4 py-4">
       <div className="flex items-center">
         <div className="ml-8 mr-4">
           <Menu className="w-18 text-white " />

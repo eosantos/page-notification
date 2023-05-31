@@ -70,7 +70,7 @@ export function CardList() {
 
   return (
     <div>
-      <div className="flex flex-wrap justify-center">
+      <div className="mx-auto flex max-w-[1366px] flex-wrap justify-center">
         {notifics.length === 0 ? <EmptyList /> : <RenderItems />}
       </div>
       <PageNumbers totalPages={totalPages} onPageSelect={setCurrentPage} />
